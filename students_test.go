@@ -57,16 +57,11 @@ func TestLess(t *testing.T){
 		want bool
 	}
 
-	p1Birthday, _ := time.Parse("2000-07-22","1999-06-25")
-	p2Birthday, _ := time.Parse("2000-07-22","1999-06-25")
-	p3Birthday, _ := time.Parse("2000-07-22","1999-06-25")
-	p4Birthday, _ := time.Parse("2000-07-22","2002-01-22")
 
-
-	p1 := Person{"John","Down",p1Birthday}
-	p2 := Person{"John","Grayhouse",p2Birthday}
-	p3 := Person{"Gregory","Downtown",p3Birthday}
-	p4 := Person{"Antony","Woodpecker",p4Birthday}
+	p1 := Person{"John","Down",time.Date(1999, 8, 2, 0, 0, 0, 0, time.UTC)}
+	p2 := Person{"John","Grayhouse",time.Date(1999, 8, 2, 0, 0, 0, 0, time.UTC)}
+	p3 := Person{"Gregory","Downtown",time.Date(1999, 8, 2, 0, 0, 0, 0, time.UTC)}
+	p4 := Person{"Antony","Woodpecker",time.Date(2014, 2, 1, 0, 0, 0, 0, time.UTC)}
 
 	tests := []test{
 		{input: People{p1,p4},want: true},
